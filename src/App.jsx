@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Outlet,
+} from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
 import Programs from "./Components/Programs/program";
@@ -16,17 +21,10 @@ import Afterlogin from "./UserUI/Afterlogin/Afterlogin";
 
 const App = () => {
   return (
-    <Router>
+    <div>
       <Navbar />
-      <Routes>
-        {/* Route for the login page */}
-        <Route path="/login" element={<LoginPage />} />
-        {/* Route for the Afterlogin page */}
-        <Route path="/Afterlogin" element={<Afterlogin />} />
-        {/* Default route for the main content */}
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Router>
+      <Outlet />
+    </div>
   );
 };
 

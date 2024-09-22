@@ -1,9 +1,7 @@
-import './AfterLogin.css'
+import "./AfterLogin.css";
 
 const Afterlogin = () => {
-  return (
-    <div> Hello </div>
-  );
+  return <div>Hello</div>;
 };
 
 export default Afterlogin;

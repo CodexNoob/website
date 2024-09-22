@@ -4,20 +4,19 @@ import { FaUser, FaLock } from "react-icons/fa";
 import back from "../../assets/back-icon.png";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 
-
 const Login = () => {
   //const [email, setEmail] = useState("");
   //const [password, setPassword] = useState("");
-  
+
   const navigate = useNavigate(); // Create a navigate instance
 
   const handleLogin = (e) => {
     e.preventDefault();
     // Add your login logic here
     //console.log("Email:", email, "Password:", password);
-  
-     // Navigate to afterlogin page on successful login
-    navigate("/Afterlogin");
+
+    // Navigate to afterlogin page on successful login
+    navigate("/students");
   };
 
   const handleBackClick = () => {
@@ -43,9 +42,9 @@ const Login = () => {
             <input
               type="password"
               placeholder="Enter your password"
-             // value={password}
+              // value={password}
               //onChange={(e) => setPassword(e.target.value)}
-             // required
+              // required
             />
             <FaLock className="icon" />
           </div>
